@@ -72,7 +72,7 @@ learinig_rate=0.01
 optimizer= torch.optim.SGD(model.parameters(), lr=learinig_rate)  
 
 '''Step 4 Traning loop'''     
-num_epoch = 100
+num_epoch = 500
 for epoch in range(num_epoch):
     #forward pass
     y_predicted=model(X_train)
@@ -90,7 +90,7 @@ for epoch in range(num_epoch):
     if (epoch+1)%10==0:
         print(f'epoch:{epoch+1},loss={loss.item():.4f}')
 with torch.no_grad():
-    y_predicted=model=model(X_test)
+    y_predicted=model(X_test)
     y_predicted_cls=y_predicted.round()
     acc=y_predicted_cls.eq(y_test).sum()/float(y_test.shape[0])
     print(f'accuracy={acc:.4f}')
