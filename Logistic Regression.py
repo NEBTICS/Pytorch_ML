@@ -7,7 +7,7 @@ Logistic Regression using pytorch
 @author: smith_barbose @neb.tics
 """
 '''
-Using the breast cancer dataset from the sklearn modeul 
+Using the breast cancer dataset from the sklearn moduel
 first we need to transform and preprocess the data 
 then 
 
